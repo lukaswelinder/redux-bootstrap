@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/redux-bootstrap/redux-bootstrap.github.io/master/img/profile.png)
+![](/img/logo.png)
 
 # redux-bootstrap
 
