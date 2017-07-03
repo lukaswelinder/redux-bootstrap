@@ -10,7 +10,13 @@ function configureStore(
 ): Redux.Store<any> {
 
     let devTools: interfaces.DevTools = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
-    const composeEnhancers = devTools ? devTools(devToolsOptions) : compose;
+
+    let useDevTools: boolean = !!devTools;
+    if(process.env.NODE_ENV === 'production' && !process.env.DEBUG) {
+        useDevTools = false;
+    }
+
+    const composeEnhancers = useDevTools ? devTools(devToolsOptions) : compose;
 
     return createStore(
         rootReducer,
@@ -19,6 +25,7 @@ function configureStore(
             applyMiddleware(...middlewares)
         )
     );
+
 }
 
 export default configureStore;
