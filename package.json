@@ -9,7 +9,7 @@
     "test": "gulp",
     "publish-please": "publish-please",
     "prepublish": "publish-please guard",
-    "postinstall": "gulp build-es"
+    "postinstall": "npm install && gulp build-es"
   },
   "repository": {
     "type": "git",
