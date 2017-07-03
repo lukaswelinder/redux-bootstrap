@@ -12,7 +12,7 @@ function configureStore(
     let devTools: interfaces.DevTools = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 
     let useDevTools: boolean = !!devTools;
-    if(process.env.NODE_ENV === 'production' && !process.env.DEBUG) {
+    if(process.env.NODE_ENV === "production" && !process.env.DEBUG) {
         useDevTools = false;
     }
 

@@ -22,10 +22,10 @@ coverage
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
-lib
+#lib
 #es
 temp
-dts
+#dts
 
 # Dependency directory
 node_modules
